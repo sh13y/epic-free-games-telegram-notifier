@@ -1,5 +1,8 @@
 # Epic Free Games Telegram Notifier
 
+![Build Status](https://img.shields.io/github/actions/workflow/status/sh13y/epic-free-games-telegram-notifier/epic-free-games-telegram-notifier.yml)
+![License](https://img.shields.io/github/license/sh13y/epic-free-games-telegram-notifier)
+
 Welcome to the **Epic Free Games Telegram Notifier**!
 
 ## What does it do?

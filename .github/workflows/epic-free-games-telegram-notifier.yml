@@ -1,39 +1,31 @@
-name: Epic Free Games Telegram Notifier
+name: Epic Games Notifier
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
   schedule:
-    # Runs daily at 8:00 AM UTC
-    - cron: "0 8 * * *"
-
-  workflow_dispatch: # Allows manual triggering from GitHub
+    - cron: '0 9 * * *'  # Run every day at 9:00 AM UTC
+  workflow_dispatch:  # Allows manual trigger from GitHub Actions UI
 
 jobs:
-  build:
+  run-notifier:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up Python
+    - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'
+        python-version: '3.8'
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run script
+    - name: Run Epic Games Notifier
+      run: |
+        python your_script.py
       env:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      run: |
-        python epic-free-games-telegram-notifier.py

@@ -84,22 +84,22 @@ async def main():
         for game in free_games:
             end_date = format_date(game["end_date"])
             message = (
-                f"🎮 *{escape_markdown(game['title'])}*\n\n"
-                f"🔥 _Now available for FREE on the Epic Games Store\\!_\n\n"
-                f"📅 Offer valid until: *{escape_markdown(end_date)}*\n\n"
-                f"🚀 Don't miss out\\!"
+                f"*{escape_markdown(game['title'])}*\n\n"
+                f"*Now available for free on the Epic Games Store\\.*\n\n"
+                f"Offer valid until: *{escape_markdown(end_date)}*\n\n"
+                f"Don't miss out\\."
             )
             await send_telegram_message_with_image(
                 BOT_TOKEN,
                 CHAT_ID,
                 message,
                 image_url=game["image_url"],
-                button_text="Claim Now 🎮",
+                button_text="Claim Now",
                 button_url=game["url"]
             )
     else:
         await send_telegram_message_with_image(
-            BOT_TOKEN, CHAT_ID, escape_markdown("🚫 No free games available at the moment. Check back later!"), ""
+            BOT_TOKEN, CHAT_ID, escape_markdown("No free games available at the moment. Check back later!"), ""
         )
 
 if __name__ == "__main__":

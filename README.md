@@ -1,10 +1,10 @@
 # Epic Free Games Telegram Notifier
 
-Welcome to the **Epic Free Games Telegram Notifier**! 🎮
+Welcome to the **Epic Free Games Telegram Notifier**!
 
 ## What does it do?
 
-This nifty little script fetches the latest free games from the Epic Games Store and sends a notification to your Telegram chat. Never miss out on a free game again!
+This script fetches the latest free games from the Epic Games Store and sends a notification to your Telegram chat. Never miss out on a free game again!
 
 ## How to use it?
 
@@ -31,6 +31,12 @@ This nifty little script fetches the latest free games from the Epic Games Store
     python epic-free-games-telegram-notifier.py
     ```
 
+## Example Notification
+
+Here is an example of what the notification will look like in your Telegram chat:
+
+![Example Notification](assets/Screenshot_20250103-042838.png)
+
 ## Why should you use it?
 
 - **Free games!** Need we say more?
@@ -52,4 +58,4 @@ This project is licensed under the WTFPL License. See the [LICENSE](LICENSE) fil
 
 ---
 
-Happy gaming! 🎉
+Happy gaming!

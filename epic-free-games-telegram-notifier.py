@@ -29,7 +29,7 @@ def fetch_free_games():
                 for offer in promo.get("promotionalOffers", []):
                     original_price = game.get("price", {}).get("totalPrice", {}).get("originalPrice", 0)
                     discounted_price = game.get("price", {}).get("totalPrice", {}).get("discountPrice", 0)
-                    if original_price == 0 and discounted_price == 0:
+                    if original_price == 0 :
                         free_games.append({
                             "title": game.get("title"),
                             "url": f"https://store.epicgames.com/en-US/p/{game.get('productSlug')}",

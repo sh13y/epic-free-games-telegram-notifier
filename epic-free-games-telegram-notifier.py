@@ -32,7 +32,7 @@ def fetch_free_games():
                     if discounted_price == 0:
                         free_games.append({
                             "title": game.get("title"),
-                            "url": f"https://store.epicgames.com/en-US/p/{game.get('productSlug')}",
+                            "url": f"https://store.epicgames.com/en-US/p/{game.get('pageSlug')}",
                             "image_url": game.get("keyImages", [{}])[0].get("url", ""),
                             "end_date": offer.get("endDate")
                         })
